@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Focus",
+    "version": "1.0",
+    "description": "Focus chrome extension",
+    "browser_action": {
+      "default_icon": "delete.png",
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://www.YouTube.com/*"],
+          "js": ["jquery.min.js","./main.js"],
+          "css": ["index.css"]
+        }
+      ]
+  }
