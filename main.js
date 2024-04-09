@@ -21,26 +21,26 @@ contentsParent.prepend(`
 `);
 
 // Using intervals to cycle through
-$(document).ready(function() {
-  function cycleThroughImages() {
-    $('#image-cycle').attr("src", `/images/${images[count]}`);
-    if (count >= images.length) {
-      count = 0;
-      $('#image-cycle').attr("src", `${images[count]}`);
-    }
-    count += 1;
-  }
-  setInterval(cycleThroughImages,1500);
-});
-
-// Using button to cycle through
 // $(document).ready(function() {
-//   $('#myBtn').on('click', function() {
+//   function cycleThroughImages() {
 //     $('#image-cycle').attr("src", `/images/${images[count]}`);
 //     if (count >= images.length) {
 //       count = 0;
 //       $('#image-cycle').attr("src", `${images[count]}`);
 //     }
 //     count += 1;
-//   });
+//   }
+//   setInterval(cycleThroughImages,1500);
 // });
+
+// Using button to cycle through
+$(document).ready(function() {
+  $('#myBtn').on('click', function() {
+    $('#image-cycle').attr("src", `/images/${images[count]}`);
+    if (count >= images.length) {
+      count = 0;
+      $('#image-cycle').attr("src", `${images[count]}`);
+    }
+    count += 1;
+  });
+});
