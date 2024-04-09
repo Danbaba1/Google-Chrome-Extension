@@ -1,17 +1,24 @@
 {
-    "manifest_version": 2,
-    "name": "Focus",
-    "version": "1.0",
-    "description": "Focus chrome extension",
-    "browser_action": {
-      "default_icon": "delete.png",
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-        {
-          "matches": ["https://www.YouTube.com/*"],
-          "js": ["jquery.min.js","./main.js"],
-          "css": ["index.css"]
-        }
-      ]
+  "manifest_version": 3,
+  "name": "Focus",
+  "version": "1.0",
+  "description": "Focus chrome extension",
+  "action": {
+    "default_icon": "delete.png",
+    "default_popup": "popup.html" 
+  },
+  "background": {
+    "service_worker": "background.js" 
+  },
+  "permissions": ["https://www.youtube.com/*"], 
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"] 
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png"
   }
+}
