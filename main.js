@@ -9,7 +9,7 @@ height: '150px',
 width: '150px'},5000);
 
 let count = 1;
-let images = ['https://m.media-amazon.com/images/I/81-AYXbCq4L._AC_UX500_.jpg', 'image-1.jpg', 'image-2.jpg', 'image-3.jpg'];
+let images = [ 'image-1.jpg', 'image-2.jpg', 'image-3.jpg','image-4.jpg','image-5.jpg','image-6.jpg'];
 
 contentsParent.prepend(`
   <section>
