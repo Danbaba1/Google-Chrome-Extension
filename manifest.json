@@ -7,14 +7,11 @@
     "default_icon": "delete.png",
     "default_popup": "popup.html" 
   },
-  "background": {
-    "service_worker": "main.js" 
-  },
   "permissions": ["https://www.youtube.com/*"], 
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js": ["content.js"] 
+      "js": ["main.js", "jquery.min.js"] 
     }
   ]
 }

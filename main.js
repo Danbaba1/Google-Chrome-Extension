@@ -1,4 +1,4 @@
-var contents = $("#contents");
+var contents = $("#content");
 var contentsParent = contents.parent();
 contents.remove();
 contentsParent.prepend('<span>Get back to your coding dreams</span>');
